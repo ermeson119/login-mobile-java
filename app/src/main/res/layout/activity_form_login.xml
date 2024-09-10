@@ -20,27 +20,48 @@
 
     <androidx.cardview.widget.CardView
         style="@style/ContainerComponents"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         app:cardCornerRadius="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo">
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintHorizontal_bias="1.0">
 
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="nome"
-            android:layout_margin="16dp"
-            android:padding="10dp"
-            tools:layout_editor_absoluteX="-37dp"
-            tools:layout_editor_absoluteY="153dp" />
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="80dp"
-            android:hint="senha"
-            android:padding="10dp" />
+        <EditText
+            android:id="@+id/edit_email"
+            style="@style/Edit_Text"
+            android:drawableRight="@drawable/ic_email"
+            android:hint="Email"
+            tools:layout_editor_absoluteX="47dp"
+            tools:layout_editor_absoluteY="383dp" />
+
+            <EditText
+                android:id="@+id/edit_senha"
+                style="@style/Edit_Text"
+                android:drawableRight="@drawable/ic_password"
+                android:hint="Senha"
+                tools:layout_editor_absoluteX="53dp"
+                tools:layout_editor_absoluteY="332dp" />
+
+            <Button
+                android:id="@+id/button"
+                style="@style/ButtonStyle"
+                android:layout_width="180dp"
+                android:text="Login"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edit_senha"/>
+
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
 
